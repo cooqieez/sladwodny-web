@@ -7,7 +7,8 @@ from PIL import Image
 try:
     api_key = st.secrets["GOOGLE_API_KEY"]
 except FileNotFoundError:
-    api_key = "AIzaSyBET8qlamTQ1H2OZ6wijb9_8VaFzKbzONE"
+    st.error("Nie znaleziono klucza API! Skonfiguruj secrets.toml lub panel Streamlit.")
+    st.stop()
 
 genai.configure(api_key=api_key)
 
