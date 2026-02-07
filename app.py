@@ -21,7 +21,8 @@ def classify_item(input_data):
     base_prompt = """
     Jesteś ekspertem projektu @sladwodny.
 
-    Na bazie wzoru Water Footprint Network wylicz jaki jest ślad wodny dla urządzenia jakim jest laptop, nastepnie w oparciu o dane poniżej, określ racjonalność tego zużycia w skali 1-4, biorąc pod uwagę że będzie użytkowany przez kilka lat.
+    Na bazie wzoru Water Footprint Network wylicz jaki jest ślad wodny dla urządzenia jakim jest laptop,
+    następnie w oparciu o dane poniżej, określ racjonalność tego zużycia w skali 1-4, biorąc pod uwagę że będzie użytkowany przez kilka lat.
     Smartfon: 2 - całkiem racjonalny bo używany przez 3/4 lata
     1kg wołowiny: 4 - nie racjonalny, można zjeść w kilka dni
     Patelnia żeliwna: 1 - bardzo racjonalny, przedmiot na lata a zużywa mało wody
@@ -38,7 +39,7 @@ def classify_item(input_data):
     1. Zidentyfikuj przedmiot (z tekstu lub ze zdjęcia).
     2. Oceń go według skali.
     
-    Odpowiedz TYLKO w formacie:
+    Odpowiedz TYLKO w formacie podanym poniej, KATEGORYCZNIE nie podawaj jako odpowiedzi CZEGOKOLWIEK INNEGO::
     NUMER_OCENY|KOLOR|NAZWA PRZEDMIOTU: KRÓTKIE UZASADNIENIE
     Np:
     4|Pomarańczowy|Plastikowa butelka: To produkt jednorazowy o dużym śladzie wodnym.
