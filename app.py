@@ -44,7 +44,7 @@ def classify_item(input_data):
     4|Pomarańczowy|Plastikowa butelka: To produkt jednorazowy o dużym śladzie wodnym.
     """
     
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-1.5-flash-latest')
     
     try:
         # Tworzymy listę treści do wysłania (Gemini przyjmuje listę [prompt, obraz])
