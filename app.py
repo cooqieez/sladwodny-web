@@ -21,19 +21,12 @@ def classify_item(input_data):
     base_prompt = """
     Jesteś ekspertem projektu @sladwodny.
 
-    Na bazie wzoru Water Footprint Network wylicz jaki jest ślad wodny dla urządzenia jakim jest laptop,
+    KONKRETNIE na bazie wzoru Water Footprint Network (W Ftotal), wylicz jaki jest stopień racjonalności śladu wodnego dla danego przedmiotu,
     następnie w oparciu o dane poniżej, określ racjonalność tego zużycia w skali 1-4, biorąc pod uwagę że będzie użytkowany przez kilka lat.
     Smartfon: 2 - całkiem racjonalny bo używany przez 3/4 lata
     1kg wołowiny: 4 - nie racjonalny, można zjeść w kilka dni
     Patelnia żeliwna: 1 - bardzo racjonalny, przedmiot na lata a zużywa mało wody
     Choinka żywa: 3 - średnio racjonalny, ale nie szkodzi bardzo
-
-    
-    ZASADY OCENY:
-    1/4 (Zielony): Najbardziej pozytywny. Rzeczy długowieczne, naturalne (np. patelnia żeliwna, wiklina).
-    2/4 (Pudrowy róż): Pozytywny. Użyteczne sprzęty o długim życiu (np. pralka, smartfon).
-    3/4 (Chabrowy): Średni. Złożona elektronika, rzeczy naturalne krótko żyjące (np. laptop, choinka naturalna).
-    4/4 (Pomarańczowy): Najmniej pozytywny. Jednorazowe, sztuczne, duży ślad (np. plastikowa butelka, 1kg wołowiny).
 
     ZADANIE:
     1. Zidentyfikuj przedmiot (z tekstu lub ze zdjęcia).
