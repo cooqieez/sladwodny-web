@@ -59,10 +59,10 @@ def classify_item(input_data):
 
 # --- INTERFEJS STRONY ---
 
-st.set_page_config(page_title="Kalkulator Wody", page_icon="💧")
+st.set_page_config(page_title="@sladwodny", page_icon="🤓")
 
-st.title("💧 Kalkulator Racjonalności Wody")
-st.markdown("Sprawdź ślad wodny wpisując nazwę lub **robiąc zdjęcie**!")
+st.title("💧 Kalkulator Śladu Wodnego")
+st.markdown("Sprawdź racjonalność śladu wodnego wpisując nazwę lub **robiąc zdjęcie**!")
 st.markdown("---")
 
 # Zakładki: Wybór między tekstem a aparatem
@@ -94,7 +94,7 @@ with tab2:
 
 # --- PRZETWARZANIE ---
 if process_request and user_input:
-    with st.spinner('AI analizuje przedmiot...'):
+    with st.spinner('Analizuje przedmiot...'):
         result = classify_item(user_input)
         
         try:
@@ -121,11 +121,11 @@ if process_request and user_input:
                     if image_file and os.path.exists(image_file):
                         st.image(image_file, width=300)
                     else:
-                        st.error(f"Ocena: {score_num}/4 (Brak pliku graficznego!)")
+                        st.error(f"Ocena: {score_num}/4 (ERR067 - no file)")
 
-                st.info(f"**Werdykt:** {reason}")
+                st.info(f"**Wynik:** {reason}")
             else:
-                st.error("AI nie zrozumiało zdjęcia lub tekstu. Spróbuj wyraźniej.")
+                st.error("Przepraszam, nie rozpoznałem zdjęcia lub tekstu. Spróbuj wykonać je ponownie.")
                 
         except Exception as e:
             st.error(f"Błąd przetwarzania: {e}")
